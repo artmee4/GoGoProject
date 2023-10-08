@@ -15,10 +15,12 @@ namespace GoGoProject.Controllers
         [HttpGet("Get")]
         public IEnumerable<ItemModel> Get()
         {
-            List<ItemModel> drawlist = new();
-            drawlist.Add(typeIP);
-            drawlist.Add(typeOOO);
-            
+            List<ItemModel> drawlist = new()
+            {
+                typeIP,
+                typeOOO
+            };
+
             return drawlist;
         }
 
